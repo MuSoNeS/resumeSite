@@ -9,6 +9,7 @@
 body{
     color: #A4B3B6;
     overflow: hidden;
+    width: 100%;
 }
 
 
@@ -47,11 +48,13 @@ body{
 }
 
 .home{
+    position: relative;
     height: 100vh;
+    width: 100%;
     background-color: #44318D;
     background-image: url('src/img/neonBackground.jpg');
     background-size: cover;
-    background-position: center;
+    background-position:center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -59,6 +62,13 @@ body{
 
 .home-content{
     max-width: 600px;
+}
+.home-content li a{
+    font-size: 16px;
+    color:#A4B3B6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
 }
 
 .home-content h1{
@@ -83,6 +93,24 @@ body{
     width: 345px;
     height: 50px;
 }
+
+.gif{
+    position: relative;
+    left: 300px;
+}
+
+.secondPlug{
+    position: absolute;
+    width: 26%;
+    left: 90px;
+}
+.plug{
+    position: relative;
+    width: 80%;
+    left: 175%;
+}
+
+
 
 .btn-box a{
     position: relative;
@@ -134,7 +162,6 @@ body{
 .btn-box a:hover::before {
     width: 100%;
 }
-
 .home-sci{
     position: absolute;
     bottom: 40px;
@@ -142,7 +169,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
 .home-sci a{
     position: relative;
     display: inline-flex;
@@ -160,7 +186,6 @@ body{
     overflow: hidden;
     transition: .5s;
 }
-
 .home-sci a:hover{
     color: #2A1B3D;
 }
@@ -176,10 +201,61 @@ body{
     transition: .5s;
 }
 
-
 .home-sci a:hover::before{
     width: 100%;
 }
+
+
+.home-sci-in-contacts{
+    position: absolute;
+    bottom: 47%;
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci-in-contacts a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #D83F87;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #D83F87;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci-in-contacts a:hover{
+    color: #2A1B3D;
+}
+.home-sci-in-contacts a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #D83F87;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci-in-contacts a:hover::before{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
 
 .wrap {
     height: 100%;
@@ -199,7 +275,6 @@ body{
     letter-spacing: 1.3px;
     font-weight: 700;
     color: #A4B3B6;
-    background: #4FD1C5;
     background: #D83F87;
     border: none;
     border-radius: 1000px;
@@ -208,8 +283,10 @@ body{
     cursor: pointer;
     outline: none;
     position: relative;
-    top: 420px;
-    left: 220%;
+    bottom: 0;
+    right: 0;
+    left: 178%;
+    top: 0;
     padding: 10px;
     }
   
@@ -243,7 +320,7 @@ body{
     border-radius: 100%;
     border: 6px solid #44318D;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -253,6 +330,31 @@ body{
   button:hover::after, button:focus::after {
     animation: none;
     display: none;
+  }
+
+  .object{
+    position:absolute;
+  }
+
+  .van{
+    top: 80%;
+    width: 10%;
+    left: 0%;
+  }
+
+  #axis:hover .move-right{/*Для одного элемента в html можно определить несколько классов*/
+    transform: translate(1920px,0);
+    -webkit-transform: translate(1920px,0); /** Chrome & Safari **/
+    -o-transform: translate(1920px,0); /** Opera **/
+    -moz-transform: translate(1920px,0); /** Firefox **/
+  }
+
+  .object{
+    position: absolute;
+    transition: all 5s ease-in-out;
+    -webkit-transition: all 5s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 5s ease-in-out; /** Firefox **/
+    -o-transition: all 5s ease-in-out; /** Opera **/
   }
   
   @keyframes ring {

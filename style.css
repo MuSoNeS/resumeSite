@@ -35,7 +35,7 @@ body{
 
 .navbar a{
     font-size: 18px;
-    color:#A4B3B6;
+    color:white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -44,28 +44,28 @@ body{
 
 .navbar a:hover,
 .navbar a.active{/*подкрашивает при выделении, сохраняет выделение на выбранной странице*/
-    color: #2A1B3D;
+    color: #D83F87;
 }
 
 .home{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #44318D;
-    background-image: url('src/img/neonBackground.jpg');
+    background-color: #2A1B3D;
+    background-image: url('src/img/backPng.png');
+    background-position:center;
     background-size: cover;
     background-position:center;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 12%;
 }
 
-.home-content{
-    max-width: 600px;
-}
+
+
 .home-content li a{
     font-size: 16px;
-    color:#A4B3B6;
+    color:white;
     text-decoration: none;
     font-weight: 500;
     transition: .3s;
@@ -93,24 +93,6 @@ body{
     width: 345px;
     height: 50px;
 }
-
-.gif{
-    position: relative;
-    left: 300px;
-}
-
-.secondPlug{
-    position: absolute;
-    width: 26%;
-    left: 90px;
-}
-.plug{
-    position: relative;
-    width: 80%;
-    left: 175%;
-}
-
-
 
 .btn-box a{
     position: relative;
@@ -142,7 +124,7 @@ body{
     color: #D83F87;
 }
 .btn-box a:nth-child(2):hover{/*изменить цвет текста в анимации*/
-    color: #44318D;
+    color: #2A1B3D;
 }
 .btn-box a:nth-child(2)::before{
     background: #D83F87;
@@ -154,7 +136,7 @@ body{
     left: 0;
     width: 0;
     height: 100%;
-    background: #44318D;
+    background: #2A1B3D;
     z-index: -1;/*определяет положение по з координате. Т.е. выставляет элемент внутри элемента. Слои, в общем*/
     transition: .5s;
 }
@@ -249,14 +231,6 @@ body{
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
 .wrap {
     height: 100%;
     display: flex;
@@ -274,7 +248,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #A4B3B6;
+    color: white;
     background: #D83F87;
     border: none;
     border-radius: 1000px;
@@ -285,7 +259,7 @@ body{
     position: relative;
     bottom: 0;
     right: 0;
-    left: 178%;
+    left: 0;
     top: 0;
     padding: 10px;
     }
@@ -295,8 +269,8 @@ body{
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
-    border: 6px solid #44318D;
-    box-shadow: 0 0 60px #2A1B3D;
+    border: 6px solid #D83F87;
+    box-shadow: 0 0 60px #D83F87;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -306,7 +280,7 @@ body{
   }
   
   .button:hover, .button:focus {
-    color: #A4B3B6;
+    color: white;
     transform: translateY(-6px);
   }
   
@@ -318,7 +292,7 @@ body{
     content: '';
     width: 30px; height: 30px;
     border-radius: 100%;
-    border: 6px solid #44318D;
+    border: 6px solid #D83F87;
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -369,3 +343,55 @@ body{
       opacity: 0;
     }
   }
+
+ /* Mobile Devices */
+@media (max-width: 480px) {
+    .body{
+    }
+    .header{
+        width: 60%;
+    }
+    .wrap{
+        display: none;
+    }
+    .home{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .home-content h1{
+        font-size: 50%;
+    }
+    .home-content h3{
+        font-size: 50%;
+    }
+    .home-content p{
+        font-size: 50%;
+    }
+    .home-content .btn-box{
+        width: 100%;
+        
+    }
+}
+        
+/* Low resolution Tablets and iPads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .wrap{
+        display: none;
+    }
+}
+        
+/* Tablets iPads (Portrait) */
+@media (min-width: 768px) and (max-width: 1024px){
+    
+}
+    
+/* Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+    
+}
+    
+/* Big boi Monitors */
+@media (min-width: 1281px) {
+    
+}

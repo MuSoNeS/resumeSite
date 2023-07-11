@@ -18,7 +18,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 10px 1%;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -58,17 +58,18 @@ body{
     background-position:center;
     display: flex;
     align-items: center;
-    padding: 0 12%;
+    padding: 0 12% 5% ;
 }
 
 
 
-.home-content li a{
+.home-content ul li a{
     font-size: 16px;
     color:white;
     text-decoration: none;
     font-weight: 500;
     transition: .3s;
+    margin: 20px 0 40px;
 }
 
 .home-content h1{
@@ -260,7 +261,7 @@ body{
     bottom: 0;
     right: 0;
     left: 0;
-    top: 0;
+    top: 40px;
     padding: 10px;
     }
   
@@ -345,19 +346,13 @@ body{
   }
 
  /* Mobile Devices */
+
 @media (max-width: 480px) {
-    .body{
-    }
     .header{
-        width: 60%;
+        width: 50%;
     }
-    .wrap{
-        display: none;
-    }
-    .home{
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    .home-content{
+        width: 50%;
     }
     .home-content h1{
         font-size: 50%;
@@ -369,9 +364,21 @@ body{
         font-size: 50%;
     }
     .home-content .btn-box{
-        width: 100%;
-        
+        display: none;
     }
+    .wrap{
+        display: none;
+    }
+    .home-content ul li{
+        font-size: 30%;
+    }
+    .home-content ul li a{
+        font-size: 30%;
+    }
+    .home-sci-in-contacts{
+        width: 70%;
+    }
+   
 }
         
 /* Low resolution Tablets and iPads */
@@ -383,12 +390,49 @@ body{
         
 /* Tablets iPads (Portrait) */
 @media (min-width: 768px) and (max-width: 1024px){
-    
+    .home-content{
+        width: 50%;
+    }
+    .home-content h1{
+        font-size: 70%;
+    }
+    .home-content h3{
+        font-size: 70%;
+    }
+    .home-content p{
+        font-size: 70%;
+    }
+    .home-content .btn-box{
+        width: 100%;
+    }
+    .wrap{
+        display: none;
+    }
+    .home-content ul li{
+        font-size: 50%;
+    }
+    .home-content ul li a{
+        font-size: 50%;
+    }
 }
     
 /* Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px){
-    
+    .home-content{
+        width: 90%;
+    }
+    .home-content h1{
+        font-size: 90%;
+    }
+    .home-content h3{
+        font-size: 90%;
+    }
+    .home-content p{
+        font-size: 90%;
+    }
+    .home-content .btn-box{
+        width: 100%;
+    }
 }
     
 /* Big boi Monitors */
